@@ -16,6 +16,7 @@ import { lazy } from "react";
 import AllListing from "../pages/AllListing";
 import DashboardLayout from "../Roots/DashboardLayout";
 import Overview from "../pages/Dashboard/Overview";
+import AdminAllListings from "../pages/Dashboard/AdminAllListings ";
 
 
 
@@ -114,9 +115,13 @@ export const router = createBrowserRouter([
                     const email = url.searchParams.get('email');              
                     return fetch(`http://localhost:5000/myListing?email=${email}`)
                 },
-                // element: <PrivateRoute><MyListing></MyListing></PrivateRoute>
                 Component:MyListing
             },
+            {
+                path:'all-listings',
+                Component: AdminAllListings,
+                loader:() => fetch('http://localhost:5000/addListing'),
+            }
         ]
     }
 ])

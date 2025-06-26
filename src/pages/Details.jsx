@@ -30,8 +30,8 @@ const Details = () => {
 
 
     return (
-        <div className='flex justify-center items-center p-5  bg-gray-100'>
-          <div className=' bg-white shadow-lg rounded-lg  p-5 '>
+        <div className='flex justify-center items-center p-5  bg-violet-100'>
+          <div className=' bg-violet-200 shadow-lg rounded-lg  p-5 '>
             <h1 className='text-center py-3 text-xl text-gray-400'> {likeCounte && <p>{data.likes} people are interested in this listing</p>}</h1>
             <div className='flex flex-col lg:justify-between '>
                 <h1 className='lg:text-2xl font-bold'>{data.title}</h1>

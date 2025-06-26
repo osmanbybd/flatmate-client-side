@@ -25,41 +25,34 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li>
-        <NavLink className="text-xl font-semibold text-black" to="/dashboard">
-          Dashboard
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="text-xl font-semibold text-black" to="addListing">
-          Add Listing
-        </NavLink>
-      </li>
+      
+     
       <li>
         <NavLink className="text-xl font-semibold text-black" to="allListing">
           All Listing
         </NavLink>
       </li>
-      <li>
+      
+    
+      {
+        user && <>
+        <li>
+        <NavLink className="text-xl font-semibold text-black" to="/dashboard">
+          Dashboard
+        </NavLink>
+      </li>
+          <li>
         <NavLink className="text-xl font-semibold text-black" to="browsListing">
           Brows Listing
         </NavLink>
       </li>
-      {user && (
-        <li>
-          <NavLink
-            className="text-xl font-semibold text-black"
-            to={`myListing?email=${user?.email}`}
-          >
-            My Listing
-          </NavLink>
-        </li>
-      )}
+        </>
+      }
     </>
   );
 
   return (
-    <div className="navbar bg-white container mx-auto ">
+    <div className="navbar bg-violet-300 sticky container mx-auto ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -149,10 +142,10 @@ const Navbar = () => {
           <>
             <Link to="login">
               {" "}
-              <button className="btn btn-primary">Log in</button>
+              <button className="btn bg-[#9e4ee9] text-violet-100 font-bold">Log in</button>
             </Link>
             <Link to="register">
-              <button className="btn btn-accent">Register</button>
+              <button className="btn bg-violet-600 text-violet-100 font-bold">Register</button>
             </Link>
           </>
         )}

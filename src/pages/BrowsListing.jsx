@@ -45,7 +45,7 @@ const BrowsListing = () => {
   type="text" className="input border border-gray-600 shadow-lg" placeholder="search your type" />
  
 </fieldset>
-          <div className="overflow-x-auto w-full  border border-gray-200 shadow-lg p-5 my-4 rounded-lg ">
+          <div className="overflow-x-auto w-full bg-violet-200  border border-violet-300 shadow-lg p-5 my-4 rounded-lg ">
   <table className="table">
     {/* head */}
     <thead>
@@ -72,7 +72,7 @@ const BrowsListing = () => {
             </div></th>
         <td ><h1 className='bg-green-700 rounded-full text-center py-1 text-white text-xs'>{data.availability}</h1></td>
         <td className='text-lg'>${data.rent}/month</td>
-        <td> <Link to={`/details/${data._id}`}><button className='btn btn-primary'>see more</button></Link></td>
+        <td> <Link to={`/details/${data._id}`}><button className='btn bg-[#9e4ee9] text-black'>see more</button></Link></td>
       </tr>
         ))
        ) : (

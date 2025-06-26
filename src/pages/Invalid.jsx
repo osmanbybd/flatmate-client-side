@@ -1,21 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from "react";
+import { Link } from "react-router";
 
-const Invalid = () => {
-    return (
-        <div className='container mx-auto  flex flex-col items-center justify-center my-48'>
-        <img className='w-[300px]' src="404.png" alt="" />
-        <h1 className='text-3xl font-bold p-5'>404 Page Not Found</h1>
-      <div>
-      <Link to='/'>
-         <button className="inline-flex items-center cursor-pointer justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">
-            GO HOME
-            </button>
-         </Link>
-         
-      </div>
- </div> 
-    );
+const ErrorPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-[#9e4ee9] to-purple-900 flex flex-col justify-center items-center text-white px-4">
+      <h1 className="text-7xl font-bold mb-4">404</h1>
+      <h2 className="text-2xl md:text-3xl font-semibold mb-2">Page Not Found</h2>
+      <p className="text-lg mb-6 text-center max-w-md">
+        Oops! The page you are looking for might have been removed, renamed, or does not exist.
+      </p>
+      <Link to="/" className="btn btn-accent bg-white text-[#9e4ee9] hover:bg-gray-200">
+        🔙 Go Back Home
+      </Link>
+    </div>
+  );
 };
 
-export default Invalid;
+export default ErrorPage;

@@ -64,7 +64,7 @@ const AddListing = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-5xl mx-auto p-6 bg-violet-50 rounded-lg shadow-md">
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-purple-700 mb-2">
           Add Roommate Listing

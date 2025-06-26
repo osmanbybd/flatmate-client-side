@@ -28,7 +28,7 @@ const Reurement = () => {
       </div>
       <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-2">
         <div className="border p-12 text-center flex flex-col justify-center bg-white items-center shadow-lg border-gray-200 rounded-lg transform transition-transform duration-500 ease-in-out hover:scale-105">
-          <IoIosContact size={40} className="my-3" />
+          <IoIosContact size={40} className="my-3 text-[#9e4ee9]" />
           <h1 className="text-2xl font-bold">Step 1: Create a Profile</h1>
           <p className="text-gray-500">
             Sign up and set up your profile with your preferences, budget, and
@@ -36,7 +36,7 @@ const Reurement = () => {
           </p>
         </div>
         <div className="border p-12 text-center flex flex-col justify-center bg-white items-center shadow-lg border-gray-200 rounded-lg transform transition-transform duration-500 ease-in-out hover:scale-105">
-          <FaMessage size={35} className="my-3" />
+          <FaMessage size={35} className="my-3 text-[#9e4ee9]" />
           <h1 className="text-2xl font-bold">Step 2: Browse Listings</h1>
           <p className="text-gray-500">
             Explore available roommate listings or post your own to find
@@ -44,7 +44,7 @@ const Reurement = () => {
           </p>
         </div>
         <div className="border p-12 text-center flex flex-col justify-center bg-white items-center shadow-lg border-gray-200 rounded-lg transform transition-transform duration-500 ease-in-out hover:scale-105">
-          <FaSearch size={35} className="my-3" />
+          <FaSearch size={35} className="my-3 text-[#9e4ee9]" />
           <h1 className="text-2xl font-bold">Step 3: Connect & Communicate</h1>
           <p className="text-gray-500">
             Reach out to compatible roommates through our secure messaging
@@ -52,7 +52,7 @@ const Reurement = () => {
           </p>
         </div>
         <div className="border p-12 text-center flex flex-col justify-center bg-white items-center shadow-lg border-gray-200 rounded-lg transform transition-transform duration-500 ease-in-out hover:scale-105">
-          <IoHome size={35} className="my-3" />
+          <IoHome size={35} className="my-3 text-[#9e4ee9]" />
           <h1 className="text-2xl font-bold">Step 4: Find Your New Home</h1>
           <p className="text-gray-500">
             Meet up in person and finalize your perfect roommate arrangement.

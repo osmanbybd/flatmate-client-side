@@ -58,7 +58,7 @@ const MyListing = () => {
         </div>
       </div>
 
-      <div className="overflow-x-auto  border border-gray-600 p-2 my-4 rounded-lg ">
+      <div className="overflow-x-auto  border border-violet-500 shadow-md p-2 my-4 rounded-lg ">
         <table className="table">
           {/* head */}
           <thead>

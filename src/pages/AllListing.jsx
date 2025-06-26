@@ -38,7 +38,7 @@ const lifestyleData = listing.lifestyle ? (Array.isArray(listing.lifestyle) ? li
 
       {/* page header */}
       <div className=" mb-6">
-        <h1 className="text-4xl font-bold text-indigo-600">
+        <h1 className="text-4xl font-bold ">
           Browse All Available Roommate Listings
         </h1>
         <p className="text-gray-600 mt-2 text-sm">
@@ -51,7 +51,7 @@ const lifestyleData = listing.lifestyle ? (Array.isArray(listing.lifestyle) ? li
 
   <div className="justify-end flex ">
         <select
-        defaultValue="select your Rang"
+        
         onChange={(e) => handleSort(e.target.value)}
         value={sorted}
         className="select select-secondary"
@@ -63,9 +63,9 @@ const lifestyleData = listing.lifestyle ? (Array.isArray(listing.lifestyle) ? li
   </div>
 
 
- <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4 container mx-auto '  >
+ <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4 container mx-auto py-3 '  >
                 {
-                    listing.map(post => <div  className='card card-lg shadow-lg transform transition-transform duration-500 ease-in-out hover:scale-105 bg-white' 
+                    listing.map(post => <div key={post._id}  className='card  card-lg shadow-lg transform transition-transform duration-500 ease-in-out hover:scale-105 bg-violet-200' 
                            
                         
                            >
@@ -90,7 +90,7 @@ const lifestyleData = listing.lifestyle ? (Array.isArray(listing.lifestyle) ? li
                       </div>
                         <div className="justify-end card-actions mt-5">
                             <p className='flex items-center gap-2'><FaHeart /> {post.likes}</p>
-                          <Link to={`/details/${post._id}`}> <button   className="btn">See more</button></Link>
+                          <Link to={`/details/${post._id}`}> <button   className="btn bg-[#9e4ee9] text-black">See more</button></Link>
                          
                         </div>
                     

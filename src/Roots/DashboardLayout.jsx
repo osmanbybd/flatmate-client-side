@@ -1,7 +1,7 @@
 // src/layout/DashboardLayout.jsx
 import { useContext, useState } from "react";
 import { Link, Outlet } from "react-router";
-import { FaHome, FaPlus, FaList, FaTachometerAlt, FaBars, FaTimes } from "react-icons/fa";
+import { FaHome, FaPlus, FaList, FaTachometerAlt, FaBars, FaTimes, FaListUl } from "react-icons/fa";
 import { AuthContext } from "../context/AuthContext";
 
 const DashboardLayout = () => {
@@ -21,7 +21,7 @@ const DashboardLayout = () => {
       </div>
 
       {/* Sidebar */}
-      <aside className={`md:block ${isSidebarOpen ? "block" : "hidden"} w-full md:w-64 bg-indigo-600 text-white p-6 space-y-6`}>
+      <aside className={`md:block ${isSidebarOpen ? "block" : "hidden"} w-full md:w-64 bg-violet-500 text-white p-6 space-y-6`}>
         <h2 className="text-2xl font-bold mb-4 hidden md:block">🏠 Dashboard</h2>
         <nav className="flex flex-col space-y-2">
           <Link
@@ -31,6 +31,9 @@ const DashboardLayout = () => {
           >
             <FaTachometerAlt /> Overview
           </Link>
+           <Link to="/dashboard/all-listings" className="flex items-center gap-2 hover:bg-indigo-700 p-2 rounded">
+      <FaListUl /> All Items
+    </Link>
           <Link
             to="/dashboard/addListing"
             className="hover:bg-indigo-700 p-2 rounded flex items-center gap-2"
@@ -56,7 +59,7 @@ const DashboardLayout = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 bg-gray-50 p-6 overflow-y-auto">
+      <main className="flex-1 bg-violet-200 p-6 overflow-y-auto">
         <Outlet />
       </main>
     </div>
