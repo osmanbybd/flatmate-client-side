@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { FaRegEye } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { Link, useLoaderData } from 'react-router';
-import { ThemeContext } from '../context/ThemeProvider';
+// import { ThemeContext } from '../context/ThemeProvider';
 
 const BrowsListing = () => {
     const initialAllData = useLoaderData()

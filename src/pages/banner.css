@@ -1,29 +1,5 @@
 
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
+/* 
 .banner{
     background-image: url('../assets/images/slide1.png');
     background-repeat: no-repeat;
@@ -34,29 +10,53 @@
     opacity: 0.8;
     
  
-}
+} */
 .banner2{
-    background-image: url('../assets/images/slide2.png');
+    background-image: url('../assets/images/banner1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
      height: 60vh; 
     width: 100%; 
-    opacity: 0.9;
+    opacity: 0.7;
+    position: relative;
 }
 .banner3{
-    background-image: url('../assets/images/slide3.png');
+    background-image: url('../assets/images/banner2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
      height: 60vh; 
     width: 100%; 
-    opacity: 0.9;
+    opacity: 0.7;
+    position: relative;
 }
 .banner4{
-    background-image: url('../assets/images/slide4.png');
+    background-image: url('../assets/images/banner3.png');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 60vh;
     background-position: center;
-    opacity: 0.9;
+    opacity: 0.8;
+    position: relative;
+}
+
+.banner2::before,
+.banner3::before,
+.banner4::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* 40% dark overlay */
+  z-index: -5;
+}
+
+.banner2 .content,
+.banner3 .content,
+.banner4 .content {
+  position: relative;
+  z-index: 8;
+  color: white;
+  text-align: center;
+  padding: 40px;
 }

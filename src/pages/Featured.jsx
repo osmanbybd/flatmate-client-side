@@ -5,17 +5,17 @@ import { Link } from 'react-router';
 
 
 import Aos from 'aos';
-import { useContext } from 'react';
-import { ThemeContext } from '../context/ThemeProvider';
+// import { useContext } from 'react';
+// import { ThemeContext } from '../context/ThemeProvider';
 const Featured = ({post}) => {
-  const {darkMode} = useContext(ThemeContext)
+  // const {darkMode} = useContext(ThemeContext)
 
 const lifestyleData = post.lifestyle ? (Array.isArray(post.lifestyle) ? post.lifestyle : post.lifestyle.split(',')) : [] ;
 
 
   
     return (
-       <div  className={`card card-lg shadow-lg transform transition-transform duration-500 ease-in-out hover:scale-105 ${darkMode ? "bg-gray-500" : "bg-white"}`} 
+       <div  className='card card-lg shadow-lg transform transition-transform duration-500 ease-in-out hover:scale-105 bg-white' 
        
     
        >

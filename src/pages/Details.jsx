@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { FaHeart, FaPhoneAlt } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { Link, useLoaderData } from 'react-router';
-import { ThemeContext } from '../context/ThemeProvider';
+// import { ThemeContext } from '../context/ThemeProvider';
 
 const Details = () => {
 
@@ -10,13 +10,13 @@ const Details = () => {
     // console.log(data)
     const [likeCounte, setLikeCounte] = useState(data.likes || 0)
     const [shoePhone, setShoePhone] = useState(false)
-    const {darkMode} =useContext(ThemeContext)
+    // const {darkMode} =useContext(ThemeContext)
 
     const lifestyleData = data.lifestyle ? (Array.isArray(data.lifestyle) ? data.lifestyle : data.lifestyle.split(',')) : []
 
 
     const handleCounte = async()=>{
-        const res =await fetch(`https://roommate-server-side-alpha.vercel.app/addListing/like/${data._id}`, {
+        const res =await fetch(`http://localhost:5000/addListing/like/${data._id}`, {
             method: 'PUT'
         })
         if(res.ok){
@@ -30,8 +30,8 @@ const Details = () => {
 
 
     return (
-        <div className={`flex justify-center items-center p-5  ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
-          <div className=' bg-gray-200 rounded-lg  p-5 '>
+        <div className='flex justify-center items-center p-5  bg-gray-100'>
+          <div className=' bg-white shadow-lg rounded-lg  p-5 '>
             <h1 className='text-center py-3 text-xl text-gray-400'> {likeCounte && <p>{data.likes} people are interested in this listing</p>}</h1>
             <div className='flex flex-col lg:justify-between '>
                 <h1 className='lg:text-2xl font-bold'>{data.title}</h1>

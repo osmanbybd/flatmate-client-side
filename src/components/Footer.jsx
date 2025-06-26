@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 import { FaGithub, FaHome } from 'react-icons/fa';
-import { ThemeContext } from '../context/ThemeProvider';
+// import { ThemeContext } from '../context/ThemeProvider';
 
 const Footer = () => {
 	const {user} = useContext(AuthContext)
-	const {darkMode} = useContext(ThemeContext)
+	// const {darkMode} = useContext(ThemeContext)
   const links = <>
   
   <li><NavLink className='text-xs font-semibold' to='/'>Home</NavLink></li>
@@ -16,10 +16,10 @@ const Footer = () => {
   </>
 
     return (
-      <footer className={`px-4 divide-y  ${darkMode ? "bg-gray-600" : "bg-white"}`}>
+      <footer className='px-4 divide-y bg-[#f2d5d5]'>
 	<div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
 		<div className="lg:w-1/3">
-			<h1 className='flex items-center gap-2 font-bold text-3xl'><FaHome className='text-blue-700' /> RoomMate</h1>
+			<h1 className='flex items-center gap-2 font-bold text-3xl'><FaHome className='text-[#9e4ee9]' /> Room <span className='text-[#9e4ee9]'>Mate</span></h1>
 				
 		</div>
 		<div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
@@ -29,31 +29,8 @@ const Footer = () => {
 				{links}
 				</ul>
 			</div>
-			<div className="space-y-3">
-				<h3 className="tracking-wide uppercase dark:text-gray-900">Company</h3>
-				<ul className="space-y-1">
-					<li>
-						<a rel="noopener noreferrer" href="#">Privacy</a>
-					</li>
-					<li>
-						<a rel="noopener noreferrer" href="#">Terms of Service</a>
-					</li>
-				</ul>
-			</div>
-			<div className="space-y-3">
-				<h3 className="uppercase dark:text-gray-900">Developers</h3>
-				<ul className="space-y-1">
-					<li>
-						<a rel="noopener noreferrer" href="#">Public API</a>
-					</li>
-					<li>
-						<a rel="noopener noreferrer" href="#">Documentation</a>
-					</li>
-					<li>
-						<a rel="noopener noreferrer" href="#">Guides</a>
-					</li>
-				</ul>
-			</div>
+		
+		
 			<div className="space-y-3">
 				<div className="uppercase dark:text-gray-900">Social media</div>
 				<div className="flex justify-start space-x-3">

@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from '../context/ThemeProvider';
+// import React, { useContext } from 'react';
+// import { ThemeContext } from '../context/ThemeProvider';
 
 const FaqSection = () => {
-  const {darkMode} = useContext(ThemeContext)
+  // const {darkMode} = useContext(ThemeContext)
  const faqData = [
   {
     question: "What is Roommate Finder?",
@@ -39,15 +39,15 @@ const FaqSection = () => {
 
     return (
         <div className='container mx-auto py-5'>
-              <h2 className={`text-3xl font-bold text-center mb-8 ${darkMode ? "text-white" : "text-black"}`}>Frequently Asked Questions</h2>
+              <h2 className='text-3xl font-bold text-center mb-8 text-black'>Frequently Asked Questions</h2>
             <div className=''>
                 {
                     faqData.map((item,index) => (
 
-                        <div key={index} className={`collapse  collapse-arrow bg-base-100 border border-base-300 ${darkMode ? "bg-gray-600" : "bg-white"}`}>
+                        <div key={index} className='text-3xl font-bold text-center mb-8 text-black'>
                         <input type="radio" name="my-accordion-2" />
-                        <div className={`collapse-title font-semibold  ${darkMode ? "text-white" : "text-black"}`}>{item.question}</div>
-                        <div className={`collapse-content text-sm ${darkMode ? "text-white" : "text-black"}`}>{item.answer}</div>
+                        <div className='text-3xl font-bold text-center mb-8 text-black'>{item.question}</div>
+                        <div className='text-3xl font-bold text-center mb-8 text-black'>{item.answer}</div>
                         </div>
                     ))
                 }

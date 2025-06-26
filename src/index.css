@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
-
-
 body{
   font-family: "Ancizar Serif", serif;
   font-optical-sizing: auto;
@@ -11,7 +9,7 @@ body{
 }
 a.active{
   text-decoration: underline;
-  color: blue;
+  color: #9e4ee9;
 }
 
 /* index.css বা App.css
