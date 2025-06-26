@@ -13,17 +13,17 @@ const Overview = () => {
 
   useEffect(() => {
     // Total listings
-    axios.get("http://localhost:5000/addListing")
+    axios.get("https://roommate-server-side-alpha.vercel.app//addListing")
       .then(res => setAllListings(res.data));
 
     // My Listings
     if (user?.email) {
-      axios.get(`http://localhost:5000/myListing?email=${user.email}`)
+      axios.get(`https://roommate-server-side-alpha.vercel.app//myListing?email=${user.email}`)
         .then(res => setMyListings(res.data));
     }
 
     // All Users
-    axios.get("http://localhost:5000/users")
+    axios.get("https://roommate-server-side-alpha.vercel.app//users")
       .then(res => setAllUsers(res.data));
   }, [user]);
 

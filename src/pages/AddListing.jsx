@@ -44,7 +44,7 @@ const AddListing = () => {
       lifestyle,
     };
 
-    fetch("http://localhost:5000/addListing", {
+    fetch("https://roommate-server-side-alpha.vercel.app//addListing", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(newFormData),

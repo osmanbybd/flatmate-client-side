@@ -4,7 +4,7 @@ const TopRatedListings = () => {
   const [topListings, setTopListings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/topRatedListings")
+    fetch("https://roommate-server-side-alpha.vercel.app//topRatedListings")
       .then((res) => res.json())
       .then((data) => setTopListings(data))
       .catch((error) =>
