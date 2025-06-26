@@ -22,7 +22,7 @@ import AdminAllListings from "../pages/Dashboard/AdminAllListings ";
 
 const Invalid = lazy(() => import("../pages/Invalid"))
 const detailLoader = async({params}) =>{
-    const res1 = await fetch(`https://roommate-server-side-alpha.vercel.app//addListing/${params.id}`);
+    const res1 = await fetch(`https://roommate-server-side-alpha.vercel.app/addListing/${params.id}`);
     if(res1.ok){
         const data1 = await res1.json();
         if(data1) return data1;
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
         children:[
             {
                 path: '/',
-                loader:() => fetch('https://roommate-server-side-alpha.vercel.app//addListing'),
+                loader:() => fetch('https://roommate-server-side-alpha.vercel.app/addListing'),
                 Component: Hoom,
             },
             {
@@ -56,14 +56,14 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'allListing',
-                loader:() => fetch('https://roommate-server-side-alpha.vercel.app//addListing'),
+                loader:() => fetch('https://roommate-server-side-alpha.vercel.app/addListing'),
                 Component: AllListing
             },
        
           
             {
                 path:'browsListing',
-                loader:()=> fetch('https://roommate-server-side-alpha.vercel.app//addListing'),
+                loader:()=> fetch('https://roommate-server-side-alpha.vercel.app/addListing'),
                 Component:BrowsListing
             },
             {
@@ -71,7 +71,7 @@ export const router = createBrowserRouter([
                 loader: ({request}) => {
                     const url = new URL(request.url)
                     const email = url.searchParams.get('email')
-                    return fetch(`https://roommate-server-side-alpha.vercel.app//users?email=${email}`)
+                    return fetch(`https://roommate-server-side-alpha.vercel.app/users?email=${email}`)
                 },
                 Component : Profile
             },
@@ -83,7 +83,7 @@ export const router = createBrowserRouter([
             },
             {
                 path:'update/:id',
-                loader: ({params})=> fetch(`https://roommate-server-side-alpha.vercel.app//addListing/${params.id}`),
+                loader: ({params})=> fetch(`https://roommate-server-side-alpha.vercel.app/addListing/${params.id}`),
                 Component:Update
             }
            
@@ -113,14 +113,14 @@ export const router = createBrowserRouter([
                 loader: ({request}) =>{
                     const url = new URL(request.url);
                     const email = url.searchParams.get('email');              
-                    return fetch(`https://roommate-server-side-alpha.vercel.app//myListing?email=${email}`)
+                    return fetch(`https://roommate-server-side-alpha.vercel.app/myListing?email=${email}`)
                 },
                 Component:MyListing
             },
             {
                 path:'all-listings',
                 Component: AdminAllListings,
-                loader:() => fetch('https://roommate-server-side-alpha.vercel.app//addListing'),
+                loader:() => fetch('https://roommate-server-side-alpha.vercel.app/addListing'),
             }
         ]
     }

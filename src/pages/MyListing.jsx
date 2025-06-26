@@ -22,7 +22,7 @@ const MyListing = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://roommate-server-side-alpha.vercel.app//addListing/${id}`, {
+        fetch(`https://roommate-server-side-alpha.vercel.app/addListing/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

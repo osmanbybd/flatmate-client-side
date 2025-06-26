@@ -26,7 +26,7 @@ const Profile = () => {
 		}
 
 
-		fetch(`https://roommate-server-side-alpha.vercel.app//users/${data.email}`, {
+		fetch(`https://roommate-server-side-alpha.vercel.app/users/${data.email}`, {
 			method: 'PUT',
 			headers: {
 				'content-type' : 'application/json'
